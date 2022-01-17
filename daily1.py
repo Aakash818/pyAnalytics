@@ -7,9 +7,12 @@ list1  #print when through spyder
 type(list1)  #type of object
 print(list1)  #print when running complete file
 list1
+L1=list([1,2,3,4])
+sorted(L1)
 sorted([100000,5,3,2,4,5,324,43,4,4,3,23,434,53442,244,2245224,523])
 list2 = ['f','c','d','e',"f"]
 list2
+sorted(list2)
 list2.count('f')
 list2.count('d')
 len(list2)
