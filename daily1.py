@@ -7,8 +7,6 @@ list1  #print when through spyder
 type(list1)  #type of object
 print(list1)  #print when running complete file
 list1
-L1=list([1,2,3,4])
-sorted(L1)
 sorted([100000,5,3,2,4,5,324,43,4,4,3,23,434,53442,244,2245224,523])
 list2 = ['f','c','d','e',"f"]
 list2
@@ -55,7 +53,7 @@ car  #mutable , value can be changed
 
 #%%frozen Dictionaries https://pypi.org/project/frozendict/
 #conda install -c conda-forge frozendict #from anaconda as admin
-#pip install frozendict   #install this library
+pip install frozendict   #install this library
 from frozendict import frozendict
 fd = frozendict({ 'brand': 'Honda' })
 fd
@@ -72,6 +70,7 @@ set2
 set3 = {'Australia', 'South Africa', 'INDIA'}
 set3
 sorted(set3)
+set1.union(set2)
 set2.union(set3) #set2 | set3
 #A.intersection(B)
 set2.intersection(set3) #set2 & set
@@ -102,6 +101,7 @@ frozenset2 #keys of dictionary made as frozen set
 str1 = 'Python Programming'
 type(str1)
 print(str1)
+str1.upper()
 str2="Yash"
 str2.lower()
 dir(str)
@@ -118,7 +118,7 @@ list1
 #for loop : indentations with colon : Run next 2 lines together
 for i in list1:
     print(i)
-
+list1[0]
   
 for i in list1:    print(i , end ='\t')
 #print?  #help
@@ -159,7 +159,7 @@ marksz
 #combine and then split
 
 #%% #numpy - array - same data type - numerical python
-list1 = [1,2,3,5]
+list1 = [1,2,3,5,'a']
 list1
 import numpy
 numpy.array([10,20])
@@ -172,7 +172,7 @@ np1
 x=np.arange(start=1,stop=1000000,step=2)
 len(x)
 x[1:100]
-x[1:50:10]
+x[1:50:2]
 np
 np.mean(np.arange(1,10000000))
 np1
@@ -224,7 +224,7 @@ df1.shape  # rows and columns
 df1.groupby('gender').size()
 df1.groupby('gender')['marks'].mean()
 df1.groupby('gender').aggregate({'marks': [np.mean, 'max','min','std','count']})
-
+    
 #%% #Graphs https://python-graph-gallery.com/
 #https://matplotlib.org/
 
@@ -250,7 +250,7 @@ sns.pairplot(iris)  #relationship diagrams
 
 #%% #Load Inbuilt Datasets
 
-#pip install pydataset
+pip install pydataset
 from pydataset import data
 data('iris')
 data('mtcars')
